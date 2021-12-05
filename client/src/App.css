@@ -1,0 +1,294 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* *********************************** <HOME/> ************************************** */
+.navbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(75, 70, 70);
+}
+.nav-container{
+    width: 85%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.user-container{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.current-user{
+    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(.8rem, 1.5vw, 1rem);;
+    margin: 0 1rem;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 50px;
+
+}
+.current-user:hover{
+    color: rgba(0,0,0,1);
+}
+.nav{
+    width: 150px;
+    height: 50px;
+    font-size: clamp(.75rem, 1.75vw, 1rem);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7a7271;
+}
+.nav:hover{
+    color: rgba(0,0,0,1);
+}
+.logo,.nav,.current-user{
+    cursor: pointer;
+}
+.logout{
+    width: 110px;
+    position: absolute;
+    top: 0%;
+    right: -77%;
+    line-height: 50px;
+    text-align: center;
+    font-size: clamp(1rem, 2.2vw, 2rem);
+    background-color: #7a7271;
+    z-index: -1; 
+}
+.active>.logout{
+    z-index: 2;
+}
+.active+.nav{
+    z-index: -1;
+}
+
+
+/* ************************************** <SIGN> *********************************** */
+.banner{
+    width: 100%;
+    height:100vh;
+    background-color: rgb(119, 136, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    flex-basis: 400px;
+    padding: 1.25rem 1rem;
+    background-color: #eff1f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
+}
+.sub-container-one{
+    width: 100%;
+    padding: .8rem;
+    background-color: white;
+    border-radius: 2px;
+}
+.sub-container-two{
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 3px solid #0f9d58;
+    border-radius: 2px;
+}
+.header-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-one{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    padding: .3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #000000, opacity 84.0%;
+    cursor: pointer;
+    user-select: none;
+}
+.header-two{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    padding: .3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+.selected{
+    color: #888888;
+    background-color: #eff1f3;
+}
+.form-container{
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+/* ********************************** Form One *********************************** */
+.form-one{
+    width: 100%;
+}
+.form-one>form>input{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 1rem 0;
+    padding-left: 10%;
+}
+
+.form-one>form>button{
+    width: 100%;
+    height: 40px;
+    padding: .3em;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
+    padding: .3em;
+    color: #000000, opacity 84.0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    background-color: #eff1f3;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.form-one>form>button:hover{
+    background-color: #0f9d58;
+    color: #eff1f3;
+}
+.fa-icon-one{
+    color: #000000, opacity 84.0%;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    z-index: 1;
+}
+.fa-icon-two{
+    color: #000000, opacity 84.0%;
+    position: absolute;
+    top: 46.5%;
+    left: 8%;
+    z-index: 1;
+}
+
+/* ********************************** FORM TWO ******************************* */
+.form-two{
+    display: none;
+    width: 100%;
+}
+.form-two>form>input{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 1rem 0;
+    padding-left: 10%;
+}
+.otp-logout-container{
+    flex-basis: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.otp-logout-container>button{
+    width: 40%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
+    padding: .3em;
+    color: #eff1f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    background-color: #0f9d58;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.otp-logout-container>button:hover{
+    background-color: #41996e;
+    color: #eff1f3;
+}
+.fa-icon-three{
+    position: absolute;
+    top: 18.5%;
+    left: 8%;
+    z-index: 1;
+}
+.fa-icon-four{
+    position: absolute;
+    top: 47.5%;
+    left: 8%;
+    z-index: 1;
+}
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+.btn{
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
+    padding: .3em;
+    color: #000000, opacity 84.0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    background-color: #eff1f3;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #0f9d58;
+    color: #eff1f3;
+}
+.message-box{
+    width: 60%;
+    height: 40px;
+    padding: .2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.message{
+    text-align: center;
+    color: rgb(255, 65, 65);
+}
+.timer{
+    text-align: center;
+    font-size:clamp(.8rem, 1.2vw, 1rem); ;
+}
